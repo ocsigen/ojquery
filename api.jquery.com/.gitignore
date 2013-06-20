@@ -1,0 +1,10 @@
+dist
+entries_tmp
+node_modules
+config.json
+.project
+*~
+*.diff
+*.patch
+.DS_Store
+.settings

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<entry type="method" name="error" return="jQuery" deprecated="1.8">
+  <title>.error()</title>
+  <desc>Bind an event handler to the "error" JavaScript event.</desc>
+  <signature>
+    <added>1.0</added>
+    <argument name="handler(eventObject)" type="Function">
+      <desc>A function to execute when the event is triggered.</desc>
+    </argument>
+  </signature>
+  <signature>
+    <added>1.4.3</added>
+    <argument name="eventData" type="Object" optional="true">
+      <desc>An object containing data that will be passed to the event handler.</desc>
+    </argument>
+    <argument name="handler(eventObject)" type="Function">
+      <desc>A function to execute each time the event is triggered.</desc>
+    </argument>
+  </signature>
+  <longdesc>
+    <p>This method is a shortcut for <code>.on('error', handler)</code>.</p>
+    <p>The <code>error</code> event is sent to elements, such as images, that are referenced by a document and loaded by the browser. It is called if the element was not loaded correctly.</p>
+    <p>For example, consider a page with a simple image element:</p>
+    <pre><code>&lt;img alt="Book" id="book" /&gt;</code></pre>
+    <p>The event handler can be bound to the image:</p>
+    <pre><code>$('#book')
+  .error(function() {
+    alert('Handler for .error() called.')
+  })
+  .attr("src", "missing.png");
+    </code></pre>
+    <p>If the image cannot be loaded (for example, because it is not present at the supplied URL), the alert  is displayed:</p>
+    <p>
+      <samp>Handler for .error() called.</samp>
+    </p>
+    <div class="warning">
+      <p>The event handler <em>must</em> be attached before the browser fires the error event, which is why the example sets the src attribute after attaching the handler. Also, the error event may not be correctly fired when the page is served locally; <code>error</code> relies on HTTP status codes and will generally not be triggered if the URL uses the <code>file:</code> protocol.</p>
+    </div>
+    <p>Note: A jQuery error event handler should not be attached to the window object. The browser fires the window's error event when a script error occurs. However, the window error event receives different arguments and has different return value requirements than conventional event handlers. Use <code>window.onerror</code> instead.</p>
+  </longdesc>
+  <example>
+    <desc>To hide the "broken image" icons for IE users, you can try:</desc>
+    <code><![CDATA[$("img")
+  .error(function(){
+    $(this).hide();
+  })
+  .attr("src", "missing.png");]]></code>
+  </example>
+  <category slug="events/browser-events"/>
+  <category slug="version/1.0"/>
+  <category slug="version/1.4.3"/>
+  <category slug="deprecated/deprecated-1.8"/>
+</entry>
