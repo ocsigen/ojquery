@@ -1,3 +1,5 @@
+(* Copyright Université Paris Diderot *)
+
 open Printf
 
 type element =
@@ -6,6 +8,7 @@ type element =
   | Method of string * (string * ty * string) list * (ty * string list) * comment
 and ty =
   | Number
+  | Integer
   | String
   | Bool
   | Obj of string
@@ -62,6 +65,7 @@ let prerry_print fp name elements =
 	                                               (mangle n) (print_type ("Field (Root, \"" ^ n ^ "\")")) ty print_comment com) ls) l
     | Array ty -> fprintf fp "Value [%s, Array (%a)]" root (print_type "Root") ty
     | Number -> fprintf fp "Value [%s, Float]" root
+    | Integer -> fprintf fp "Value [%s, Int]" root
     | String -> fprintf fp "Value [%s, String]" root
     | Bool -> fprintf fp "Value [%s, Bool]" root
     | Obj "unknown" -> fprintf fp "Value [%s, Abbrv ([], Some [], \"js\")]" root

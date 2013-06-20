@@ -1,3 +1,5 @@
+(* Copyright Université Paris Diderot *)
+
 open Xml_utils
 
 type jQuery_func =

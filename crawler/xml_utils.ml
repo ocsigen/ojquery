@@ -1,3 +1,5 @@
+(* Copyright Université Paris Diderot *)
+
 open Xmlm
 
 let is_same_string str1 str2 =

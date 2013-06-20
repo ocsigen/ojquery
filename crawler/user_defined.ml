@@ -5,15 +5,15 @@ let goji_types = [
 ("jqXHR", To_goji.Unknown "jqXHR");
 ("400", To_goji.Unknown "400");
 ("undefined", To_goji.Unknown "undefined");
-("Number", To_goji.Unknown "Number");
-("Integer", To_goji.Unknown "Integer");
+("Number", To_goji.Number);
+("Integer", To_goji.Integer);
 ("Promise", To_goji.Unknown "Promise");
 ("Deferred", To_goji.Unknown "Deferred");
 ("Array", To_goji.Unknown "Array");
 ("Anything", To_goji.Unknown "Anything");
 ("true", To_goji.Unknown "true");
 ("Callbacks", To_goji.Unknown "Callbacks");
-("Boolean", To_goji.Unknown "Boolean");
+("Boolean", To_goji.Bool);
 ("Object", To_goji.Unknown "Object");
 ("PlainObject", To_goji.Unknown "PlainObject");
 ("", To_goji.Unknown "");
