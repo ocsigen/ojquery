@@ -1,0 +1,7 @@
+Ojquery.cmo : jq_types.cmo javaScript.cmo Ojquery.cmi
+Ojquery.cmx : jq_types.cmx javaScript.cmx Ojquery.cmi
+javaScript.cmo :
+javaScript.cmx :
+jq_types.cmo : javaScript.cmo
+jq_types.cmx : javaScript.cmx
+Ojquery.cmi : jq_types.cmo javaScript.cmo

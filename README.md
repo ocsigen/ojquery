@@ -2,27 +2,17 @@
 
 This a binding of the jQuery library, using **goji** by Benjamin CANOU.
 
-## Usage of the crawler
+This library is not over yet, and the interface WILL change in the future. 
+You are however free to use it if writing deprecated code is your thing.
 
-The crawler is made for the "vanilla" jQuery documentation. First, you can
-extract all the types used in the library by typing :
+## Usage
 
-    ./crawler types path/to/jQuery/doc/entries/*.xml > user_defined.ml
+Compile your project with the package ojquery. Yep, that's all. You can use it now.
 
-This will fill the user_defined.ml file with types and the corresponding
-To_goji type. We can hardly infere those types, so you will have to it by
-yourself, e.g. replace :
+## Known Issues
 
-    ("boolean", To_goji.Unknown "boolean");
-
-by :
-
-    ("boolean", To_goji.Bool);
-
-
-Once all the types are defined, `make` and type :
-
-    ./crawler path/to/jQuery/doc/entries/*.xml > bindingFile.ml
-
-Overload is not available in OCaml, and you'll have a lot of function with the
- same name but different arguments. You'll have to rename them yourself.
+Most of the typing is not done. If the signature of the function seems correct 
+to you, I guess you can use it. You might be able to still use some "undone" 
+functions (using JavaScript.Inject), but there is no guarantee
+at all, and you're on your own. I'm not even sure it'll work with 
+JavaScript.Inject actually. Anyway, good luck.

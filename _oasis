@@ -1,0 +1,22 @@
+OASISFormat: 0.3
+Name:        ojquery
+Version:     0.001
+Synopsis:    jQuery binding using goji
+Authors:     Christophe Lecointe
+License:     LGPL-3.0 with OCaml linking exception
+Plugins:     META (0.3), DevFiles (0.3)
+
+Library ojquery
+  Path:            src
+  BuildTools:      ocamlbuild
+  BuildDepends:
+    js_of_ocaml, js_of_ocaml.syntax, lwt, lwt.syntax, react, jquery
+  Modules:         Ojquery
+  InternalModules: JavaScript,
+                   Jq_types
+  CompiledObject:  byte
+  
+Document doc
+  Title:      API reference for ojquery
+  InstallDir: $docdir
+  
