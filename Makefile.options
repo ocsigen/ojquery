@@ -1,0 +1,21 @@
+
+#----------------------------------------------------------------------
+#           SETTINGS FOR YOUR PACKAGE
+#----------------------------------------------------------------------
+
+# Package name,version and description
+PKG_NAME := ojquery
+PKG_VERS := your version
+PKG_DESC := your description
+
+# Source files for the package
+FILES := $(wildcard src/*.ml*)
+
+# OCamlfind packages for the package
+PACKAGES := js_of_ocaml js_of_ocaml.syntax lwt lwt.syntax react jquery
+
+# Debug package (yes/no): Debugging info in compilation
+DEBUG := no
+
+# Package's library $(PKG_NAME).{client,server}.cma (a,cmxa,cmxs only server side)
+LIBDIR := lib/
