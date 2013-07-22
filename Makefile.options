@@ -5,14 +5,14 @@
 
 # Package name,version and description
 PKG_NAME := ojquery
-PKG_VERS := your version
-PKG_DESC := your description
+PKG_VERS := -1
+PKG_DESC := jQuery binding for ocaml
 
 # Source files for the package
 FILES := $(wildcard src/*.ml*)
 
 # OCamlfind packages for the package
-PACKAGES := js_of_ocaml js_of_ocaml.syntax lwt lwt.syntax react jquery
+PACKAGES := js_of_ocaml js_of_ocaml.syntax lwt lwt.syntax react
 
 # Debug package (yes/no): Debugging info in compilation
 DEBUG := no

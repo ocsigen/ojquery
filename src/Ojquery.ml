@@ -46,13 +46,6 @@ let ensure_block_field o f =
     Ops.set o f b ; b
   else v
 
-module Js = struct
-  include Js
-
-  let inject_t = Inject.identity
-  let extract_t = Extract.identity
-end
-
 type t = any
 
 let inject_t = Inject.identity
@@ -63,6 +56,13 @@ let jQ s = Js.Unsafe.fun_call
 
 let jQelt e = Js.Unsafe.fun_call (Js.Unsafe.variable "jQuery")
     [| Js.Unsafe.inject e |]
+
+let js_jQ s = Js.Unsafe.fun_call
+    (Js.Unsafe.variable "jQuery") [|Js.Unsafe.inject (Js.string s)|]
+
+let js_jQelt e = Js.Unsafe.fun_call (Js.Unsafe.variable "jQuery")
+    [| Js.Unsafe.inject e |]
+
 
 let add obj  elements  =
   let args = alloc_args 1 in

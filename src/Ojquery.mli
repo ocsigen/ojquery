@@ -1,8 +1,6 @@
 type t
 
 (**/**)
-val inject_t : t -> JavaScript.any
-val extract_t : JavaScript.any -> t
 
 (**/**)
 
@@ -10,8 +8,13 @@ val extract_t : JavaScript.any -> t
 val jQ : string -> t
 
 (** Easy way to call the jQuery object jQ "#foo" <=> $("#foo") **)
-val jQelt : Dom_html.element Js.t -> t
+val jQelt : < .. > Js.t -> t
 
+(** Easy way to call the jQuery object jQ "#foo" <=> $("#foo") **)
+val js_jQ : string -> < .. > Js.t
+
+(** Easy way to call the jQuery object jQ "#foo" <=> $("#foo") **)
+val js_jQelt : < .. > Js.t -> < .. > Js.t
 
 (** Add elements to the set of matched elements.
     @param elements One or more elements to add to the set of matched elements. *)
