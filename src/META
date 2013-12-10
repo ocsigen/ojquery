@@ -1,8 +1,8 @@
 # OASIS_START
-# DO NOT EDIT (digest: b2cdf3fcc84dc6fa6db242ed5e5cf9df)
-version = "0.001"
-description = "jQuery binding using goji"
-requires = "js_of_ocaml js_of_ocaml.syntax"
+# DO NOT EDIT (digest: 7a190bacbab2b4f59bc7f52a94a674fc)
+version = "0.1"
+description = "Ocaml javascript bindings of JQuery"
+requires = "js_of_ocaml js_of_ocaml.syntax lwt lwt.syntax react"
 archive(byte) = "ojquery.cma"
 archive(byte, plugin) = "ojquery.cma"
 exists_if = "ojquery.cma"

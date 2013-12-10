@@ -1,22 +1,36 @@
 OASISFormat: 0.3
-Name:        ojquery
-Version:     0.001
-Synopsis:    jQuery binding using goji
-Authors:     Christophe Lecointe
-License:     LGPL-3.0 with OCaml linking exception
-Plugins:     META (0.3), DevFiles (0.3)
+Name: ojquery
+Version: 0.1
+Synopsis: Ocaml javascript bindings of JQuery
+Authors:
+  Charly Chevalier,
+  Vincent Balat,
+  Gabriel Radanne,
+  Chistophe Lecointe,
+  Arnaud Parant
+License: LGPL-3.0
+BuildTools: ocamlbuild
+Plugins: META (0.3), DevFiles (0.3)
 
-Library ojquery
-  Path:            src
-  BuildTools:      ocamlbuild
+Library "ojquery"
+  Path: src
+  Modules:
+    Ojquery
+  InternalModules:
+    Javascript
   BuildDepends:
-    js_of_ocaml, js_of_ocaml.syntax, lwt, lwt.syntax, react, jquery
-  Modules:         Ojquery
-  InternalModules: JavaScript,
-                   Jq_types
-  CompiledObject:  byte
-  
+    js_of_ocaml,
+    js_of_ocaml.syntax,
+    lwt,
+    lwt.syntax,
+    react
+  CompiledObject: byte
+
 Document doc
-  Title:      API reference for ojquery
-  InstallDir: $docdir
-  
+  Title: API reference for Ojquery
+  Type: ocamlbuild (0.3)
+  Install: true
+  InstallDir: $htmldir/api
+  BuildTools: ocamldoc
+  XOCamlbuildPath: .
+  XOCamlbuildLibraries: ojquery
