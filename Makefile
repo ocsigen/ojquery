@@ -9,6 +9,9 @@ build: setup.data
 doc: setup.data build
 	$(SETUP) -doc $(DOCFLAGS)
 
+wikidoc: setup.data build
+	$(SETUP) -build ojquery-api.wikidocdir/index.wiki
+
 test: setup.data build
 	$(SETUP) -test $(TESTFLAGS)
 
