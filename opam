@@ -10,5 +10,8 @@ remove: [
 ]
 depends: [
   "ocamlfind"
+  "react"
   "js_of_ocaml"
+  ## OASIS is not required in released version
+  "oasis" {>= "0.4.4"}
 ]
