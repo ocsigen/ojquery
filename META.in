@@ -1,6 +1,0 @@
-names = "@@PKG_NAME@@"
-version = "@@PKG_VERS@@"
-description = "@@PKG_DESC@@"
-
-requires = "@@REQUIRES@@"
-archive(byte) = "@@ARCHIVES_BYTE@@"

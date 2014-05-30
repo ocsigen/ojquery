@@ -1,4 +1,4 @@
-OASISFormat: 0.3
+OASISFormat: 0.4
 Name: ojquery
 Version: 0.1
 Synopsis: Ocaml javascript bindings of JQuery
@@ -8,8 +8,9 @@ Authors:
   Gabriel Radanne,
   Chistophe Lecointe,
   Arnaud Parant
-License: LGPL-3.0
+License: LGPL-3.0 with OCaml linking exception
 BuildTools: ocamlbuild
+AlphaFeatures: compiled_setup_ml
 Plugins: META (0.3), DevFiles (0.3)
 
 Library "ojquery"
@@ -17,7 +18,7 @@ Library "ojquery"
   Modules:
     Ojquery
   InternalModules:
-    Javascript
+    JavaScript
   BuildDepends:
     js_of_ocaml,
     js_of_ocaml.syntax,
@@ -25,6 +26,7 @@ Library "ojquery"
     lwt.syntax,
     react
   CompiledObject: byte
+  XMETARequires: js_of_ocaml, lwt, react
 
 Document "ojquery-api"
   Title: API reference for Ojquery

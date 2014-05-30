@@ -1,4 +1,5 @@
 {1 Ojquery}
 
-{!modules:
-}
+{!modules: Ojquery}
+
+{!indexlist}

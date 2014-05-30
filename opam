@@ -2,6 +2,8 @@ opam-version: "1"
 maintainer: "dev@ocsigen.org"
 version: "dev"
 build: [
+  ["./configure"
+      "--prefix" prefix]
   [make]
   [make "install"]
 ]
@@ -12,6 +14,7 @@ depends: [
   "ocamlfind"
   "react"
   "js_of_ocaml"
+  "lwt"
   ## OASIS is not required in released version
   "oasis" {>= "0.4.4"}
 ]
