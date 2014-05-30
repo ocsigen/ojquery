@@ -1,0 +1,10 @@
+# OASIS_START
+# DO NOT EDIT (digest: 2ddd3b2f498a2353e142a0957646afd8)
+version = "0.1"
+description = "Ocaml javascript bindings of JQuery"
+requires = "js_of_ocaml lwt react"
+archive(byte) = "ojquery.cma"
+archive(byte, plugin) = "ojquery.cma"
+exists_if = "ojquery.cma"
+# OASIS_STOP
+
