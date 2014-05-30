@@ -1,13 +1,14 @@
 opam-version: "1"
 maintainer: "dev@ocsigen.org"
+version: "dev"
 build: [
-  ["%{make}%"]
-  ["%{make}%" "install"]
+  [make]
+  [make "install"]
 ]
 remove: [
   ["ocamlfind" "remove" "ojquery"]
 ]
 depends: [
   "ocamlfind"
-  "js_of_ocaml" {>= "9999"}
+  "js_of_ocaml"
 ]
