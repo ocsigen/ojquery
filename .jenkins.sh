@@ -5,7 +5,7 @@ opam install --verbose ojquery
 
 do_build_doc () {
   make wikidoc
-  cp -Rf _build/ojquery-api.wikidocdir/*.wiki $(API_DIR)
+  cp -Rf _build/ojquery-api.wikidocdir/*.wiki ${API_DIR}
 }
 
 do_remove () {
