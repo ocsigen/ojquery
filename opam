@@ -2,8 +2,8 @@ opam-version: "1"
 maintainer: "dev@ocsigen.org"
 version: "dev"
 build: [
-  ["./configure"
-      "--prefix" prefix]
+  [ make "setup.exe" ]
+  [ "./setup.exe" "-configure" "--prefix" prefix ]
   [make]
   [make "install"]
 ]
