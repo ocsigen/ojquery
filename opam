@@ -1,12 +1,16 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "dev@ocsigen.org"
 version: "dev"
+authors: "dev@ocsigen.org"
+homepage: "https://github.com/ocsigen/ojquery"
+bug-reports: "https://github.com/ocsigen/ojquery/issues"
+dev-repo: "https://github.com/ocsigen/ojquery.git"
 build: [
   [ make "setup.exe" ]
   [ "./setup.exe" "-configure" "--prefix" prefix ]
   [make]
-  [make "install"]
 ]
+install: [ make "install" ]
 remove: [
   ["ocamlfind" "remove" "ojquery"]
 ]
